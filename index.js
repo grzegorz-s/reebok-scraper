@@ -1,15 +1,12 @@
 import express from 'express';
-import { getHtml, getProducts } from './lib/scrapper';
-
-const reebokMensCrossfitUrl =
-  'https://www.reebok.pl/mezczyzni-buty-crossfit?prefn1=sizeSearchValue&prefv1=39%7C40';
+import { getHtml, getProducts } from './lib/scraper';
+import './lib/cron.js';
+import { reebokMensCrossfitUrl } from './lib/constants.js';
 
 const app = express();
-
 app.get('/products', async (req, res, next) => {
-  console.log('scrapping');
+  console.log('scraping');
   const data = await getProducts(await getHtml(reebokMensCrossfitUrl));
-  console.log(data);
   res.json(data);
 });
 

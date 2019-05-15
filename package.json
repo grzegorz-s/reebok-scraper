@@ -9,10 +9,11 @@
     "cheerio": "^1.0.0-rc.3",
     "esm": "^3.2.22",
     "express": "^4.16.4",
-    "lowdb": "^1.0.0"
+    "lowdb": "^1.0.0",
+    "node-cron": "^2.0.3"
   },
   "scripts": {
-    "dev": "node -r esm index.js"
+    "dev": "nodemon -r esm index.js --ignore db.json"
   },
   "devDependencies": {
     "nodemon": "^1.19.0"
