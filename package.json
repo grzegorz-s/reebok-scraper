@@ -7,7 +7,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.3",
-    "esm": "^3.2.22"
+    "esm": "^3.2.22",
+    "express": "^4.16.4"
   },
   "scripts": {
     "dev": "node -r esm index.js"
